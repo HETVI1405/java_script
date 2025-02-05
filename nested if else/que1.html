@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--wap a code of  eligible for vote or not with the hellp of nest else if-->
+
+    <script>
+
+        let n = prompt('Enter your age : ');
+
+        let age = parseInt(n);
+
+        if(age>18)
+    {
+        if(age>100)
+        {
+            document.write("Enter valid age ");
+        }
+        else{
+            document.write("You are eligible for  vote ");
+        }
+    }
+    else 
+    {
+        if(age<=0)
+        {
+            document.write("Enter valid age ");
+        }
+        else
+        {
+            document.write("You are not eligible for vote  ");
+        }
+    }
+
+    </script>
+
+
+</body>
+</html>
