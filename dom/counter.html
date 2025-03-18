@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            background-color: rgb(226, 225, 236);
+        }
+        #btn1,#btn2,#btn3,#btn4{
+            padding: 10px 40px;
+            background-color: rgb(63, 63, 69);
+            color: aliceblue;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h3 id="h3">0</h3>
+    <hr><hr><hr>
+    
+    <button id="btn1"> ++</button>
+    <button id="btn2"> -- </button>
+    <button id="btn3"> 2X </button>
+    <button id="btn4"> /2</button>
+
+ 
+
+    <script>
+
+let count=0;
+const btn1 = document.getElementById("btn1")
+const btn2 = document.getElementById("btn2")
+const btn3 = document.getElementById("btn3")
+const btn4 = document.getElementById("btn4")
+
+const h2 = document.getElementById("h3")
+
+
+
+
+
+btn1.addEventListener("click" , () => {
+
+
+count++;
+h3.innerText=count;
+  
+
+})
+ 
+
+btn2.addEventListener("click" , () => {
+    if(count<=0){
+    h3.innerText="ERROR"
+   }else{
+    count--;
+    h3.innerText=count;}
+    
+
+})
+ 
+
+
+btn3.addEventListener("click" , () => {
+    
+    if(count<0){
+    h3.innerText="ERROR"
+   }else{
+    count*=2;
+    h3.innerText=count;}
+    
+    
+
+})
+ 
+
+
+btn4.addEventListener("click" , () => {
+
+    if(count<=0){
+    h3.innerText="ERROR"
+   }else{
+    count /=2;
+    h3.innerText=count;}   
+
+
+})
+ 
+
+
+ 
+        </script>
+
+
+</body>
+</html>
