@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h4> QUESTION:- <hr> 
+        wap to perform method overloading to find sum of 2 to 4 arguments.
+         ex. sum(10,20), sum(10,20,30), sum(_....4).</h4>
+     
+    <script>
+        
+    class Sum {
+        constructor(num1, num2, num3 = 0, num4 = 0) {
+            this.num1 = num1;
+            this.num2 = num2;
+            this.num3 = num3;
+            this.num4 = num4;
+        }
+
+        output() {
+            let sum = this.num1 + this.num2 + this.num3 + this.num4;
+            document.write( sum + "<br>");
+        }
+    }
+
+  
+    const ans1 = new Sum(10, 20); 
+    const ans2 = new Sum(10, 20, 30);
+    const ans3 = new Sum(10, 20, 30, 40); 
+
+    ans1.output(); 
+    ans2.output(); 
+    ans3.output(); 
+
+
+    </script>
+
+
+</body>
+</html>

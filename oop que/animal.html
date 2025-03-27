@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>QUESTION:-<hr> wap to craete a class for animal with attribute like name,type,gender and age, make these all
+     attribute private to secure direct access of the users, perform input and output for 3 defferent
+     animals.</h3>
+
+<script>
+  class Animal {
+    #name;
+    #type;
+    #gender;
+    #age;
+    input(name, type, gender, age) {
+        this.#name = name;
+        this.#type= type;
+        this.#gender = gender;
+        this.#age = age;
+    }
+
+    output(){
+     document.write("Name: "+ this.#name +"&nbsp; &nbsp;");
+     document.write("Type: "+ this.#type +"&nbsp; &nbsp;&nbsp; ");   
+     document.write("Gender: "+ this.#gender+"&nbsp;&nbsp;&nbsp;");   
+     document.write("Age: "+ this.#age +"&nbsp;&nbsp;");   
+
+    }
+}
+
+
+const a1 = new Animal();
+const a2 = new Animal();
+const a3= new Animal();
+a1.input( "lion","mansahari", "male",10+"<br>");
+a2.input( "monkey",  "sarvavahi", "female",35+"<br>");
+a3.input( "cow", "sakahari", "female",16+ "<br>");
+
+a1.output();
+a2.output();
+a3.output();
+
+  
+</script>
+
+
+
+</body>
+</html>

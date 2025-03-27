@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h4> QUESTION:- <hr>  wap to perform method overriding to display student details.
+         school(name,year) -> student(name,std,school,year)
+         display() -- override this method in javascript oop
+  </h4>
+         <script>
+
+class School {
+    constructor(name, year) {
+        this.schoolName = name;
+        this.Year = year;
+    }
+
+    print() {
+       document.write("school_name :-"+this.schoolName+"<br>");
+       document.write("year :-"+this.Year+"<br>")
+    }
+}
+
+
+class Student extends School {
+    constructor(studentName, studentStd, schoolName, schoolYear) {
+        super(schoolName, schoolYear); 
+        this.studentName = studentName;
+        this.studentStd = studentStd;
+    }
+
+    
+    print() {
+        document.write("Name :-"+this.studentName +"<br>");
+        document.write("STD :-"+this.studentStd+"<br>");
+    }
+}
+
+const school = new School("ABC High School ", 2006);
+school.print();
+
+
+const student= new Student("hetvi patel", 10, "ABC High School", 2013);
+student.print(); 
+document.writeln("<br>")
+
+const school3 = new School(" sarda vidhya  pith", 2010);
+school3.print();
+
+
+const student3 = new Student("mahi patel", 9, "matrubhumi vidhya sankul ", 2016);
+student3.print(); 
+document.writeln("<br>")
+
+
+const school2 = new School(" deep darshan School ", 2016);
+school2.print();
+
+
+const student2 = new Student("sarvangi patel", 12, "ABC High School", 2016);
+student2.print(); 
+         </script>
+</body>
+</html>
