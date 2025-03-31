@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="form.css">
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    </head>
+    <body>
+ 
+ <div class="container">
+ 
+    <input type="email" id="email" placeholder="Enter email" class="input">
+    <p id="err" class="error"></p>
+    <input type="password" id="password" placeholder="Enter password" class="input">
+    <input type="password" id="conPassword" placeholder=" Enter Confirm password" class="input">
+    <p id="err2" class="error"></p>
+    <button id="btn">Signup</button>
+    <p id="status"></p>
+</div>
+
+<script>
+    $(btn).on("click", function () {
+    let email = $("#email").val();
+    let password = $("#password").val();
+    let conPassword = $("#conPassword").val();
+    let isValid = true;
+
+    let emailValidator = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    let passwordValidator = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}$/; 
+
+    if (email == "" ||! emailValidator.test(email)) {
+        $("#err").text("Email is invalid!");
+        isValid = false;
+    }
+
+    if (password == "" || conPassword == "" || !passwordValidator.test(password)) {
+        console.log("Entered!");
+        isValid = false;
+        $("#err2").text("It's not strong password!");
+    }
+
+    if (password !== conPassword) {
+        isValid = false;
+        $("#err2").text("Passwords do not match!");
+    }
+
+    if (isValid) {
+        $("#status").text("Sign up successfully!");
+    }
+});
+
+</script>
+
+
+
+
+
+
+
+
+    </script>
+
+    </body>
+</html>
