@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css" integrity="sha512-OQDNdI5rpnZ0BRhhJc+btbbtnxaj+LdQFeh0V9/igiEPDiWE2fG+ZsXl0JEH+bjXKPJ3zcXqNyP4/F/NegVdZg==" crossorigin="anonymous" referrerpolicy="no-referrer" /><link href="https://fonts.googleapis.com/css2?family=Lavishly+Yours&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <div class="bg" style="height: 100vh; width: 100%;">
+        <img src="img/bg1.jpg" alt="" style="height: 100vh; width: 100%;">
+        <h1>My To-Do List</h1>
+    </div>
+    <input type="text" id="value" placeholder="New List" />
+     <div class="err"></div>
+    <button id="add">Add</button>
+      <div id="mylist"></div>
+
+
+        <script>
+
+
+    $("#add").click(function () {
+        let value = $("#value").val();
+        if (value !== "") {
+                $("#mylist").append("<li class='task'><span class='task-text'>" + value + "</span> <button class='edit'><i class='ri-pencil-fill'></i></button> <button class='delete'>X</button></li>")
+           
+        
+            $(".delete").on("click", function() { 
+                      $(this).parent().remove(); 
+                  });
+                  $("#mylist").on("click", ".edit", function () {
+                let taskText = $(this).siblings(".task-text");
+                let newValue = prompt("Update your task:", taskText.text());
+                if (newValue !== null  !== "") {
+                    taskText.text(newValue);
+                }
+            });\
+ 
+
+           
+        }
+        else{
+            $(".err").text("please enter task");
+            isValid = false;
+        }
+       
+    });
+    
+
+         </script>
+     
+     </body>
+     </html>
+     
+
+
+
+        </script>
+</body>
+</html>

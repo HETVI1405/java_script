@@ -1,0 +1,90 @@
+*
+{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+   
+}
+h1{
+    position: absolute;
+    top: 5%;
+    right: 39%;
+    font-family: "Cookie", cursive;
+    color: rgb(169, 61, 153);
+   
+}
+#value{
+    position: absolute;
+    top: 25%;
+    right: 35%;
+    border-radius: 10px;
+    border: 2px solid rgb(169, 61, 153);
+    height: 50px;
+    width: 25%;
+    
+
+}
+::placeholder{
+    padding-left: 10px;
+    padding: 10px;
+}
+
+#add
+{
+    position: absolute;
+    top: 27%;
+    right: 28%;
+    border-radius: 10px;
+    border: 2px solid rgb(245, 239, 244);
+    height: 30px;
+    width: 5%;
+      background-color: rgb(169, 61, 153) ;
+      color: aliceblue;
+}
+#mylist{
+    color: rgb(127, 9, 87);
+     position: absolute;
+    top: 40%;
+    right: 50%;
+    font-size: 20px;
+    width: 10%;
+
+}
+.delete{
+    color: rgb(252, 245, 250);
+     
+    height:25px;
+    width: 20%;
+    background-color:rgb(127, 9, 87);
+    border: 1px solid white;
+    cursor: pointer;
+
+}
+.edit
+{
+    color: rgb(252, 245, 250);
+     
+    height:25px;
+    width: 20%;
+    background-color:rgb(127, 9, 87);
+    border: 1px solid white;
+    cursor: pointer;
+    
+}
+.task {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 300%;
+    padding: 5px 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    background-color: aliceblue;
+}
+.err{
+    color: rgb(204, 22, 22);
+    position: absolute;
+    top:35%;
+   right: 50%;}
+
+
