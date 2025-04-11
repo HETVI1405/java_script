@@ -1,0 +1,74 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(190, 140, 237);
+}
+.main{
+    position:absolute;
+    top: 10%;
+    right:40%;
+}
+.btncon{
+    display: flex;
+    justify-content: space-between;
+}
+#task{
+    padding: 10px;
+    border: 1px solid rgb(133, 12, 203);
+    border-radius: 20px;
+    margin-right: 10px;
+    width: 250px;
+}
+#btn{
+    border-radius: 30px;
+    background-color: blueviolet;
+    color: white;
+    padding: 10px;
+    font-size: 15px;
+    border:1px solid white;
+}
+#err{
+position: absolute;
+color: rgb(224, 16, 16);
+font-weight: boldX;
+top: 100%;
+font-size: 20px;
+}
+.listbox ul{
+    height:500px;
+    width: 90%;
+    display: flex;
+ 
+    flex-wrap: wrap;
+    width:300%;
+    position: absolute;
+    left:-90%;
+    margin-top: 40px;
+    justify-content: space-between;
+    margin-right: 305;
+}
+.listbox ul  li{
+background-color: blueviolet;
+font-size: 20px;
+height: 250px;
+width: 20%;
+color: aliceblue;
+list-style: none;
+margin-right: 10px;
+margin-top: 10px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.delete{
+    background-color: rgb(195, 162, 226);
+    padding: 5px;
+    border:1px solid white;
+    margin-left: 10px;
+    /* position: relative;
+    top: 80%;
+    right: 90%; */
+}
