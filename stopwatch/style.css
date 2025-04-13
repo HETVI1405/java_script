@@ -6,7 +6,7 @@
 
 body {
   font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(135deg, #00c9ff, #92fe9d);
+ background-color:blue;
   height: 100vh;
   display: flex;
   justify-content: center;
