@@ -1,0 +1,127 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+    <style>
+* {
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+ 
+}
+
+body {
+ 
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background-image: url("img/the_netflix_login_background__canada__2024___by_logofeveryt_dh0w8qv-fullview.jpg" ) ; 
+  backdrop-filter: blur(2px);
+  
+}
+
+.container {
+  background: black;
+  border-radius: 20px;
+ 
+ 
+  padding: 25px;
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  transition: transform 0.3s ease;
+}
+
+.container:hover {
+  transform: translateY(-5px);
+}
+
+input {
+  padding: 12px;
+  width: 100%;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  transition: 0.3s ease;
+}
+
+input::placeholder {
+  color: #ccc;
+}
+
+input:focus {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+button {
+  padding: 12px;
+  width: 100%;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(to right, #ff416c, #ff4b2b);
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background: linear-gradient(to right, #ff4b2b, #ff416c);
+  transform: scale(1.02);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+  margin-top: 5px;
+}
+
+#name {
+  font-size: 22px;
+  font-weight: 600;
+  margin-top: 5px;
+  color: #ffffff;
+}
+
+#actor,
+#director {
+  font-size: 16px;
+  color: #dddddd;
+}
+
+
+      </style>
+</head>
+<body>
+    
+    <div class="container">
+        <input type="text" id="input" placeholder="Enter movie name">
+    <button id="search">Search</button>
+
+    <img src="" alt="" id="img">
+    <div id="name"></div>
+    <div id="actor"></div>
+    <div id="director"></div>
+    <div id="desc"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
