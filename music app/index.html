@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      *{
+        margin: 0%;
+        padding: 0%;
+        box-sizing: border-box;
+        background-color: black;
+      }
+      .con{
+        position: absolute;
+        top: 10%;
+        width: 34%;
+       left: 30%;
+        background-color: rgb(108, 107, 107);
+        height: 420px;
+        border-radius: 50%;
+        box-shadow: 0 0 20px rgba(0, 170, 255, 0.6);
+        animation: glow 3s ease-in-out infinite alternate;
+        
+ 
+      }
+      h2{
+        position: absolute;
+        right: 50%;
+        color: aliceblue;
+        top:10px;
+      }
+      audio {
+  width: 95%;
+  max-width: 1300px;
+  padding: 10px;
+  position: absolute;
+  bottom: 4px;
+  border-radius: 12px;
+  background-color:black;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: black;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+img{
+ 
+  width: 60%;
+  height: 250px;
+        border-radius: 50%;
+        position: absolute;
+        left:20%;
+        top: 20%;
+}
+
+#refresh{
+  background-color: aliceblue;
+  color: black;
+  padding: 10px;
+  border-radius: 20px;
+  border: 1px solid white;
+  /* font-weight: bolder; */
+  position: absolute;
+  bottom: 15px;
+  right: 2%;
+}
+#songname{
+  color: aliceblue;
+  position: absolute;
+        bottom: 10%;
+        width: 40%;
+       left: 35%;
+       font-size: 25px;
+       font-weight: bold;
+}
+.con {
+  position: absolute;
+  top: 10%;
+  width: 32%;
+  left: 30%;
+  background-color: rgb(108, 107, 107);
+  height: 410px;
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(0, 170, 255, 0.6);
+  animation: rotate 8s linear infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+img {
+  width: 60%;
+  height: 250px;
+  border-radius: 50%;
+  position: absolute;
+  left: 20%;
+  top: 20%;
+ 
+}
+
+
+      
+    </style>
+</head>
+<body>
+  <h2 id="title">Enjoy</h2>
+  <div class="con">
+   
+  <img id="cover" src="images/image1.jpg" alt="Song Cover" width="250"></div>
+  <div id="songname">illah-Ye javani he diwani-simala wale maza</div>
+
+  <audio src="songs/128-Ilahi - Yeh Jawaani Hai Deewani 128 Kbps.mp3"controls  id="audio"></audio>
+
+
+  <br>
+ 
+  <br><br>
+  <button id="refresh">>></button>
+
+<script src="script.js"></script>
+</body> 
+</html>
