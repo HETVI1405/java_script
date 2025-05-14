@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U2C3</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    
+    <h1>TODO App</h1>
+
+    <div>
+      
+      <form id="form">
+        <label for="">Task Name</label><br />
+        <input id="task" type="text" placeholder="Enter Task Name" /><br />
+        <label for="">Priority </label><br />
+        <select id="priority">
+          <option value="">Select Priority</option>
+          <option value="High">High</option>
+          <option value="Low">Low</option>
+        ><br />
+        <input type="submit" />
+      </form>
+      <table>
+        <!-- Dont change order of columns -->
+        <thead>
+          <tr>
+            <th>Task</th>
+            <th>Priority</th>
+            <th style="background-color: red;">Delete</th>
+          </tr>
+        </thead>
+        <tbody>
+      
+        </tbody>
+      </table>
+    </div>
+    <script>
+const form = document.getElementById("form");
+const taskInput = document.getElementById("task");
+const prioritySelect = document.getElementById("priority");
+const tbody = document.querySelector("tbody");
+
+
+form.addEventListener("submit", function (event) {
+  event.preventDefault(); 
+
+  const taskName = taskInput.value.trim();
+  const priority = prioritySelect.value;
+
+
+  if (taskName === "" || priority === "") {
+    alert("Please fill in both fields.");
+    return;
+  }
+
+  const tr = document.createElement("tr");
+
+  const taskTd = document.createElement("td");
+  taskTd.innerText = taskName;
+
+  const priorityTd = document.createElement("td");
+  priorityTd.innerText = priority;
+
+  const deleteTd = document.createElement("td");
+  const deleteBtn = document.createElement("button");
+  deleteBtn.innerText = "Delete";
+  deleteBtn.style.backgroundColor = "red";
+  deleteBtn.style.color = "white";
+
+
+  deleteBtn.addEventListener("click", function () {
+    tr.remove();
+  });
+
+  deleteTd.appendChild(deleteBtn);
+
+
+  tr.appendChild(taskTd);
+  tr.appendChild(priorityTd);
+  tr.appendChild(deleteTd);
+
+  tbody.appendChild(tr);
+
+ 
+  taskInput.value = "";
+  prioritySelect.value = "";
+});
+</script>
+  </body>
+</html>
+
+
+
